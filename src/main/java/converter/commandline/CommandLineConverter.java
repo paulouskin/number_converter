@@ -9,7 +9,7 @@ import converter.implementations.RomanNumeralsConverter;
 public class CommandLineConverter {
     public static void main(String [] args) {
         Convertible romanConverter = new RomanNumeralsConverter();
-        if (args.length > 1) {
+        if (args.length != 1) {
             System.out.printf("Wrong number of arguments.");
         } else {
             System.out.printf("You pass %s roman which corresponds to %s arabic",
