@@ -1,6 +1,6 @@
-Roman Numerals conversion
+<h3>Roman Numerals conversion</h3>
 
-<b>Values</b>
+<h4>Values</h4>
 
 Symbol Value 
 
@@ -20,7 +20,7 @@ M 1000
 
 
 
-<b>Additive and Subtractive Principles</b>
+<h4>Additive and Subtractive Principles</h4>
 
 Generally, Roman numerals are written in descending order from left to right, and are added sequentially, 
 for example MMVI (2006) is interpreted as 1000 + 1000 + 5 + 1.
@@ -29,3 +29,9 @@ precedes a symbol of larger value, the smaller value is subtracted from the larg
 added to the total. For example, in MCMXLIV (1944), the symbols C, X and I each precede a symbol of 
 higher value, and the result is interpreted as 1000 plus (1000 minus 100) plus (50 minus 10) plus (5 
 minus 1).
+
+<h4>To run</h4>:
+
+mvn clean install
+
+mvn exec:java -Dexec.mainClass=converter.commandline.CommandLineConverter -Dexec.args=<i>"your_roman_numeral"</i>
