@@ -30,7 +30,7 @@ added to the total. For example, in MCMXLIV (1944), the symbols C, X and I each 
 higher value, and the result is interpreted as 1000 plus (1000 minus 100) plus (50 minus 10) plus (5 
 minus 1).
 
-<h4>To run</h4>:
+<h4>To run:</h4>
 
 mvn clean install
 
