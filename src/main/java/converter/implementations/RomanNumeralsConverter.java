@@ -1,6 +1,6 @@
 package converter.implementations;
 
-import converter.contracts.Convertable;
+import converter.contracts.Convertible;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -8,13 +8,13 @@ import java.util.regex.Pattern;
 /**
  * Created by NoteP on 18.12.2015.
  */
-public class RomanNumeralsConverter implements Convertable{
+public class RomanNumeralsConverter implements Convertible {
 
     private static final String ROMAN_REGEX = "^M{0,3}(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})(IX|IV|V?I{0,3})$";
 
     public String convert(String rNumeral) {
 
-        String romanNumeral = rNumeral.toUpperCase();
+        String romanNumeral = rNumeral.toUpperCase().trim();
         if (isRomanNumeral(romanNumeral)) {
             return parseRomanNumeral(romanNumeral);
         } else {
@@ -45,11 +45,9 @@ public class RomanNumeralsConverter implements Convertable{
                 arabic -= last_digit;
                 arabic += current_digit;
                 last_digit = current_digit;
-                current_digit = 0;
             } else {
                 last_digit = current_digit;
                 arabic += current_digit;
-                current_digit = 0;
             }
         }
         return String.valueOf(arabic);
