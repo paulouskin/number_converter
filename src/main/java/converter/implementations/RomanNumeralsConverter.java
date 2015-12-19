@@ -26,7 +26,7 @@ public class RomanNumeralsConverter implements Convertible {
         if (!romanNumeral.isEmpty()) {
             Pattern romanNumeralPattern = Pattern.compile(ROMAN_REGEX);
             Matcher matchRomanNumeralPattern = romanNumeralPattern.matcher(romanNumeral);
-            return matchRomanNumeralPattern.find();
+            return matchRomanNumeralPattern.matches();
         }
         return false;
     }
