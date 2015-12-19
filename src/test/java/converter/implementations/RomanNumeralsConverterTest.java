@@ -12,12 +12,14 @@ import org.junit.Test;
 public class RomanNumeralsConverterTest {
 
     private static Convertable numeralsConverter;
-    private int arabic2006 = 2006;
-    private int arabic1944 = 1944;
+    private String arabic2006 = "2006";
+    private String arabic1944 = "1944";
 
     private String roman2006 = "MMVI";
     private String roman1944 = "MCMXLIV";
+
     private String incorrectNumeral = "CMCLXIVM";
+    private String emptyString = "";
 
     @BeforeClass
     public static void setUp() {
@@ -26,19 +28,24 @@ public class RomanNumeralsConverterTest {
 
     @Test
     public void testConvertRomanMMVIToArabic2006() {
-        int converted = numeralsConverter.convert(roman2006);
+        String converted = numeralsConverter.convert(roman2006);
         Assert.assertEquals("Conversion number error", arabic2006, converted);
     }
 
     @Test
     public void testConvertRomanMCMXLIVToArabic1944() {
-        int converted = numeralsConverter.convert(roman1944);
+        String converted = numeralsConverter.convert(roman1944);
         Assert.assertEquals("Conversion number error", arabic1944, converted);
     }
 
     @Test(expected = IllegalArgumentException.class)
     public void testConvertIncorrectRomanNumeralThrowsIllegalArgumentException() {
         numeralsConverter.convert(incorrectNumeral);
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void testConvertEmptyStringThrowsIllegalArgumentException() {
+        numeralsConverter.convert(emptyString);
     }
 
     @AfterClass

@@ -5,6 +5,6 @@ package converter.contracts;
  */
 public interface Convertable {
 
-    int convert(String romanNumber);
+    public String convert(String romanNumber);
 
 }
