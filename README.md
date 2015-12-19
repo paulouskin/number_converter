@@ -1,23 +1,16 @@
 <h3>Roman Numerals conversion</h3>
 
 <h4>Values</h4>
-
-Symbol Value 
-
-I 1
-
-V 5 
-
-X 10 
-
-L 50 
-
-C 100 
-
-D 500 
-
-M 1000 
-
+<table>
+<th>Symbol</th><th>Value</th>
+<tr><td>I</td><td>1</td></tr>
+<tr><td>V</td><td>5</td></tr>
+<tr><td>X</td><td>10</td></tr>
+<tr><td>L</td><td>50</td></tr>
+<tr><td>C</td><td>100</td></tr>
+<tr><td>D</td><td>500</td></tr>
+<tr><td>M</td><td>1000</td></tr>
+</table>
 
 
 <h4>Additive and Subtractive Principles</h4>
